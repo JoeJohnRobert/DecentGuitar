@@ -1,0 +1,5 @@
+<ul>
+<% axe_masters.each do |axer| %>
+  <Li> <%= link_to axer.name, axe_master_path(axer) %> </li>
+<% end %>
+</ul>
