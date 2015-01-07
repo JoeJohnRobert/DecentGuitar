@@ -2,7 +2,7 @@
 <h1> <%= axe_master.name %>'s Page </h1> 
 <h3> Guitars </h3>
   <ul> 
-    <% axe_master.guitars.each do |axe| %>
+    <% guitars.each do |axe| %>
     <li> 
       <%= axe.make %> - <%= axe.model %>, <%= axe.color %> 
       <%= link_to "Edit", axe_master_guitar_path(axe_master, axe) %>

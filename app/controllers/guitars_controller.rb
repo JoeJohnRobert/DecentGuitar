@@ -1,7 +1,11 @@
 class GuitarsController < ApplicationController
-
-  expose(:axe_master) 
   expose(:guitar, attributes: :guitar_params) 
+  expose(:guitars) 
+  expose(:axe_master) 
+
+def show
+  binding.pry
+end
 
   def create
     if guitar.save
@@ -31,5 +35,4 @@ class GuitarsController < ApplicationController
     def guitar_params
       params.require(:guitar).permit(:make, :model, :color, :axe_master_id)
     end
-
 end
