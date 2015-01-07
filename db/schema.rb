@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20150106171245) do
   end
 
   create_table "guitars", force: true do |t|
-    t.string   "name"
     t.string   "make"
     t.string   "model"
+    t.string   "color"
     t.integer  "axe_master_id"
     t.datetime "created_at"
     t.datetime "updated_at"

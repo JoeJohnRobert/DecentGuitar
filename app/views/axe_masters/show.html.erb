@@ -1,10 +1,12 @@
+<%= link_to "New Axe", new_axe_master_guitar_path(axe_master) %>
 <h1> <%= axe_master.name %>'s Page </h1> 
 <h3> Guitars </h3>
-<% if axe_master.guitars %>
   <ul> 
     <% axe_master.guitars.each do |axe| %>
-    <li> <%= axe.name %></li>
+    <li> 
+      <%= axe.make %> - <%= axe.model %>, <%= axe.color %> 
+      <%= link_to "Edit", axe_master_guitar_path(axe_master, axe) %>
+      <%= link_to "Delete", axe_master_guitar_path(axe_master, axe), :method => :delete, :confirm => "Are you sure?" %>  
+    </li>
     <% end %>
   </ul>
-<% end %>
-<%= link_to "New Axe", new_axe_master_guitar_path(axe_master) %>

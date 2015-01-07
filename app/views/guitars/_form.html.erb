@@ -1,10 +1,16 @@
 <%= form_for [axe_master, guitar] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :make %>
-  <%= f.text_field :make %>
-  <%= f.label :model %>
-  <%= f.text_field :model %>
+  <p>
+    <%= f.label :make %>
+    <%= f.text_field :make %>
+  </p>
+  <p>
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </p>
   <%= f.hidden_field :axe_master_id, value: axe_master.id %>
-  <%= f.submit 'Submit!' %>
+  <p> <%= f.submit 'Submit!' %> </p>
 <% end %>
